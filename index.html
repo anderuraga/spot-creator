@@ -1,180 +1,176 @@
 <!DOCTYPE html>
 <html lang="es">
+
 <head>
-<meta charset="utf-8">
-<meta http-equiv="X-UA-Compatible" content="IE=edge">
-<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
-<meta name="description" content="Ficha para crear nuevo surf spot">
-<meta name="author" content="Spot Life SL">
-<link href="https://www.surfsearchspot.com/sssback/web/favicon.ico" type="image/x-icon" rel="icon">
-<title>Spot - Backoffice</title>
-
-<link rel="stylesheet" href="create-spot.css">
-
-<link href="https://www.surfsearchspot.com/sssback/web/css/bootstrap.min.css" rel="stylesheet">
-
-<link href="https://www.surfsearchspot.com/sssback/web/css/sb-admin-2.css" rel="stylesheet">
-<link href="https://www.surfsearchspot.com/sssback/web/css/style.css" rel="stylesheet">
-
-<link href="https://www.surfsearchspot.com/sssback/web/font-awesome-4.1.0/css/font-awesome.min.css" rel="stylesheet" type="text/css">
-
-<link href="https://www.surfsearchspot.com/sssback/web/css/lightbox.min.css" rel="stylesheet" type="text/css">
-
-
-<link href="/sssback/web/js/datatable/css/dataTables.responsive.css" rel="stylesheet" type="text/css">
-
-
-<link rel="stylesheet" href="https://www.surfsearchspot.com/sssback/web/js/morris.js-0.5.1/morris.css">
-
-<link rel="stylesheet" href="fonts/style.css">
-
-
-<!--[if lt IE 9]>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
+    <meta name="description" content="Ficha para crear nuevo surf spot">
+    <meta name="author" content="Spot Life SL">
+    <link href="https://www.surfsearchspot.com/sssback/web/favicon.ico" type="image/x-icon" rel="icon">
+    <title>Spot - Backoffice</title>
+    <link rel="stylesheet" href="create-spot.css">
+    <link href="https://www.surfsearchspot.com/sssback/web/css/bootstrap.min.css" rel="stylesheet">
+    <link href="https://www.surfsearchspot.com/sssback/web/css/sb-admin-2.css" rel="stylesheet">
+    <link href="https://www.surfsearchspot.com/sssback/web/css/style.css" rel="stylesheet">
+    <link href="https://www.surfsearchspot.com/sssback/web/font-awesome-4.1.0/css/font-awesome.min.css" rel="stylesheet" type="text/css">
+    <link href="https://www.surfsearchspot.com/sssback/web/css/lightbox.min.css" rel="stylesheet" type="text/css">
+    <link href="/sssback/web/js/datatable/css/dataTables.responsive.css" rel="stylesheet" type="text/css">
+    <link rel="stylesheet" href="https://www.surfsearchspot.com/sssback/web/js/morris.js-0.5.1/morris.css">
+    <link rel="stylesheet" href="fonts/style.css">
+    <!--[if lt IE 9]>
         <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
         <script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
     <![endif]-->
 </head>
+
 <body>
-<div class="container">
-<div class="row">
-
-
-
-
-    	<section>
-        <div class="wizard">
-            <div class="wizard-inner">
-             <!-- tablist -->
-                <div class="connecting-line"></div>
-                <ul class="nav nav-tabs" role="tablist">
-
-                    <li role="presentation" class="active">
-                        <a href="#step1" data-toggle="tab" aria-controls="step1" role="tab" title="Spot">
-                            <span class="round-tab">
-                                <span class="ico-sssmarker ico-sssmarker-spot"></span>
-                            </span>
-                        </a>
-                    </li>
-
-                    <li role="presentation" class="disabled">
-                        <a href="#step2" data-toggle="tab" aria-controls="step2" role="tab" title="Step 2">
-                            <span class="round-tab">
+    <div class="container">
+        <div class="row">
+            <section>
+                <div class="wizard">
+                    <div class="wizard-inner">
+                        <!-- tablist -->
+                        <div class="connecting-line"></div>
+                        <ul class="nav nav-tabs" role="tablist">
+                            <li role="presentation" class="active">
+                                <a href="#step1" data-toggle="tab" aria-controls="step1" role="tab" title="Spot"> <span class="round-tab">
+                                <span class="ico-sssmarker ico-sssmarker-spot"></span> </span>
+                                </a>
+                            </li>
+                            <li role="presentation" class="disabled">
+                                <a href="#step2" data-toggle="tab" aria-controls="step2" role="tab" title="Step 2"> <span class="round-tab">
                                 <i class="glyphicon glyphicon-pencil"></i>
-                            </span>
-                        </a>
-                    </li>
-                    <li role="presentation" class="disabled">
-                        <a href="#step3" data-toggle="tab" aria-controls="step3" role="tab" title="Viento">
-                            <span class="round-tab">
+                            </span> </a>
+                            </li>
+                            <li role="presentation" class="disabled">
+                                <a href="#step3" data-toggle="tab" aria-controls="step3" role="tab" title="Viento"> <span class="round-tab">
                                 <i class="glyphicon glyphicon-flag"></i>
-                            </span>
-                        </a>
-                    </li>
-
-                     <li role="presentation" class="disabled">
-                        <a href="#step3" data-toggle="tab" aria-controls="step3" role="tab" title="Descripción">
-                            <span class="round-tab">
+                            </span> </a>
+                            </li>
+                            <li role="presentation" class="disabled">
+                                <a href="#step3" data-toggle="tab" aria-controls="step3" role="tab" title="Descripción"> <span class="round-tab">
                                 <i class="glyphicon glyphicon-pencil"></i>
-                            </span>
-                        </a>
-                    </li>
-
-                    <li role="presentation" class="disabled">
-                        <a href="#complete" data-toggle="tab" aria-controls="complete" role="tab" title="Complete">
-                            <span class="round-tab">
+                            </span> </a>
+                            </li>
+                            <li role="presentation" class="disabled">
+                                <a href="#complete" data-toggle="tab" aria-controls="complete" role="tab" title="Complete"> <span class="round-tab">
                                 <i class="glyphicon glyphicon-ok"></i>
-                            </span>
-                        </a>
-                    </li>
-                </ul>
-            </div>
-        <!-- /tablist -->
-
-            <form role="form">
-                <div class="tab-content">
-                <!-- step1 -->
-                    <div class="tab-pane active" role="tabpanel" id="step1">
-                        <div class="step1">
-
-                        </div>
-
-
-                        <ul class="list-inline pull-right">
-                            <li><button type="button" class="btn btn-primary next-step">Save and continue</button></li>
-                        </ul>
-                    </div>
-                <!-- /step1 -->
-
-                <!-- step2 -->
-                    <div class="tab-pane" role="tabpanel" id="step2">
-                        <div class="step2">
-
-                        </div>
-                        <ul class="list-inline pull-right">
-                            <li><button type="button" class="btn btn-default prev-step">Previous</button></li>
-                            <li><button type="button" class="btn btn-primary next-step">Save and continue</button></li>
-                        </ul>
-                    </div>
-                <!-- /step2 -->
-
-                <!-- step3 -->
-                    <div class="tab-pane" role="tabpanel" id="step3">
-                        <div class="step33">
-                        <h5><strong>Basic Details</strong></h5>
-
-                        </div>
-                        <ul class="list-inline pull-right">
-                            <li>
-                                <button type="button" class="btn btn-default prev-step">Previous</button>
-                            </li>
-                            <li>
-                                <button type="button" class="btn btn-default next-step">Skip</button>
-                            </li>
-                            <li>
-                                <button type="button" class="btn btn-primary btn-info-full next-step">Save and continue</button>
+                            </span> </a>
                             </li>
                         </ul>
                     </div>
-                <!-- /step3 -->
-
-                <!-- step4 -->
-                    <div class="tab-pane" role="tabpanel" id="step4">
-                        <div class="step44">
-                            <h5>paso4</h5>
-
-
+                    <!-- /tablist -->
+                    <form role="form">
+                        <div class="tab-content">
+                            <!-- step1 -->
+                            <div class="tab-pane active" role="tabpanel" id="step1">
+                                <div class="step1">
+                                    <div class="row col-lg-12">
+                                        <h2>Crear Nuevo Spot</h2>
+                                        <p>Gracias por animarte a mejorar este spot. Vamos comenzar paso a paso, con tu ayuda vamos a conseguir la mejor guia de surf.</p>
+                                        <p>Estas a punto de convertirte en <b>Embajador@</b> de este Spot.</p>
+                                    </div>
+                                    <div clas="row">
+                                        <div class="col-lg-6">
+                                            <div class="form-group">
+                                                <label for="formulario_spot_name" class="required">Nombre:</label>
+                                                <input type="text" id="formulario_spot_name" name="formulario_spot[name]" required="required" placeholder="Nombre del spot, o en su defecto el nombre de la playa" class="form-control" alt="Como se llama el surf spot"> </div>
+                                            <div class="form-group">
+                                                <label for="formulario_spot_level" class="required">Nivel para surfear el spot</label>
+                                                <select id="formulario_spot_level" name="formulario_spot[level]" required="true" class="form-control list-group" size="5">
+                                                    <option value="1">Principiante</option>
+                                                    <option value="2">Avanzado</option>
+                                                    <option value="3">Experto</option>
+                                                    <option value="4">Pro</option>
+                                                </select>
+                                            </div>
+                                        </div>
+                                        <div class="col-lg-6" id="localizacion">
+                                            <div class="panel panel-default">
+                                                <div class="panel-heading">
+                                                    <h2><i class="fa fa-map-marker fa-fw"></i>Localización</h2> </div>
+                                                <div class="panel-body">
+                                                    <div>
+                                                        <label for="formulario_spot_latitude" class="required">Latitud:</label>
+                                                        <input type="text" id="formulario_spot_latitude" name="formulario_spot[latitude]" readonly required="required">
+                                                        <label for="formulario_spot_longitude" class="required">Longitud:</label>
+                                                        <input type="text" id="formulario_spot_longitude" name="formulario_spot[longitude]" readonly required="required"> </div>
+                                                    <style>
+                                                        #map-canvas {
+                                                            width: auto;
+                                                            height: 300px;
+                                                        }
+                                                    </style>
+                                                    <p>Arrastra el marcador en el mapa para seleccionar tu localización</p>
+                                                    <div id="map-canvas"></div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <!-- col-lg-6  -->
+                                    </div>
+                                    <!--/localizacion  -->
+                                </div>
+                                <!-- step1 -->
+                                <ul class="list-inline pull-right">
+                                    <li>
+                                        <button type="button" class="btn btn-primary next-step">Save and continue</button>
+                                    </li>
+                                </ul>
+                            </div>
+                            <!-- /step1 -->
+                            <!-- step2 -->
+                            <div class="tab-pane" role="tabpanel" id="step2">
+                                <div class="step2"> </div>
+                                <ul class="list-inline pull-right">
+                                    <li>
+                                        <button type="button" class="btn btn-default prev-step">Previous</button>
+                                    </li>
+                                    <li>
+                                        <button type="button" class="btn btn-primary next-step">Save and continue</button>
+                                    </li>
+                                </ul>
+                            </div>
+                            <!-- /step2 -->
+                            <!-- step3 -->
+                            <div class="tab-pane" role="tabpanel" id="step3">
+                                <div class="step33">
+                                    <h5><strong>Basic Details</strong></h5> </div>
+                                <ul class="list-inline pull-right">
+                                    <li>
+                                        <button type="button" class="btn btn-default prev-step">Previous</button>
+                                    </li>
+                                    <li>
+                                        <button type="button" class="btn btn-default next-step">Skip</button>
+                                    </li>
+                                    <li>
+                                        <button type="button" class="btn btn-primary btn-info-full next-step">Save and continue</button>
+                                    </li>
+                                </ul>
+                            </div>
+                            <!-- /step3 -->
+                            <!-- step4 -->
+                            <div class="tab-pane" role="tabpanel" id="step4">
+                                <div class="step44">
+                                    <h5>paso4</h5> </div>
+                            </div>
+                            <!-- /step4 -->
+                            <!-- step5 -->
+                            <div class="tab-pane" role="tabpanel" id="complete">
+                                <div class="step5"> </div>
+                            </div>
+                            <!-- /step4 -->
+                            <div class="clearfix"></div>
                         </div>
-                    </div>
-                <!-- /step4 -->
-
-                <!-- step5 -->
-                    <div class="tab-pane" role="tabpanel" id="complete">
-                        <div class="step5">
-
-
-
-                        </div>
-                    </div>
-                <!-- /step4 -->
-                    <div class="clearfix"></div>
+                    </form>
                 </div>
-            </form>
+                <!-- /<div class="wizard"> -->
+            </section>
         </div>
-    </section>
-   </div>
-</div>
-
-
- <script
-  src="https://code.jquery.com/jquery-2.2.4.min.js"
-  integrity="sha256-BbhdlvQf/xTY9gja0Dq3HiwQF8LaCRTXxZKRutelT44="
-  crossorigin="anonymous"></script>
-
-   <script
-  src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.0/js/bootstrap.min.js"></script>
-
-
-<script src="create-spot.js"></script>
-
+    </div>
+    <script src="https://code.jquery.com/jquery-2.2.4.min.js" integrity="sha256-BbhdlvQf/xTY9gja0Dq3HiwQF8LaCRTXxZKRutelT44=" crossorigin="anonymous"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.0/js/bootstrap.min.js"></script>
+    <script src="create-spot.js"></script>
 </body>
+
 </html>
