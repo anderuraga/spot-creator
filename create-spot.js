@@ -1,6 +1,8 @@
 $(document).ready(function () {
     //Initialize tooltips
     $('.nav-tabs > li a[title]').tooltip();
+    $('span').tooltip();
+    $('i').tooltip();
 
     //Wizard
     $('a[data-toggle="tab"]').on('show.bs.tab', function (e) {
@@ -65,4 +67,16 @@ $(document).ready(function()
 	});
 
 	return false;
+});
+
+
+$(document).ready(function () {
+
+    $("div[data-role='selectable'] span").click(function(){
+        $(this).toggleClass('selected');
+        $(this).siblings('span').removeClass('selected');
+
+    });
+
+
 });

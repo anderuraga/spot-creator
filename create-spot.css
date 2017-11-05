@@ -1,10 +1,46 @@
+
 /* icon
 **************************************/
 
 [class^="ico-sss"], [class*=" ico-sss"] {
     font-size: 2em;
-    color: #5bc0de !important;
+    color: #555;
 }
+
+i.info{
+    color: #1A4C80;
+}
+
+/*  data-role="selectable"
+******************************************/
+
+
+div[data-role="selectable"]{
+    font-size: 2em;
+    color: #e0e0e0;
+    display: flex;
+    flex-flow: row;
+    flex-wrap: nowrap;
+    justify-content: space-around;
+}
+
+/*
+div[data-role="selectable"] span:hover{
+    font-size: 2.2em;
+    transition-duration: 0.5s;
+}
+*/
+
+.selected{
+    color: #00B5D6;
+}
+
+.selected .path9:before{
+    color: #00B5D6 !important;
+}
+
+
+
 
 /*  TABS
 **************************************/
