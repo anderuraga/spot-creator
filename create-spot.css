@@ -39,6 +39,25 @@ div[data-role="selectable"] span:hover{
     color: #00B5D6 !important;
 }
 
+/* Compass
+***************************************/
+
+.compas_wrapper{
+  width:200px;
+  height:200px;
+  position:relative;
+}
+.compas_wrapper img{
+  position:absolute;
+  opacity:0.5;
+  width:200px;
+  height:200px;
+}
+
+compas_wrapper option{
+  width: 25px;
+}
+
 
 
 

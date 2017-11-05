@@ -39,9 +39,13 @@
                                     </a>
                                 </li>
                                 <li role="presentation" class="disabled">
-                                    <a href="#step2" data-toggle="tab" aria-controls="step2" role="tab" title="Step 2"> <span class="round-tab">
-                                        <i class="glyphicon glyphicon-pencil"></i>
-                                        </span> </a>
+                                    <a href="#step2" data-toggle="tab" aria-controls="step2" role="tab" title="Swell">
+                                       <span class="round-tab">
+                                            <span class="ico-sssswell-enormuos">
+                                                <span class="path1"></span><span class="path2"></span><span class="path3"></span><span class="path4"></span><span class="path5"></span><span class="path6"></span>
+                                            </span>
+                                        </span>
+                                     </a>
                                 </li>
                                 <li role="presentation" class="disabled">
                                     <a href="#step3" data-toggle="tab" aria-controls="step3" role="tab" title="Viento"> <span class="round-tab">
@@ -113,7 +117,7 @@
                                                 </div>
 
                                                 <div class="form-group">
-                                                    <label for="formulario_spot_tides" class="required">Mareas <i class="info glyphicon glyphicon-info-sign" title="Puedes seleccionad mas de una marea"></i></label>
+                                                    <label for="formulario_spot_tides" class="required">Mareas <i class="info glyphicon glyphicon-info-sign" title="Puedes seleccionar mas de una marea"></i></label>
                                                     <br>
                                                     <div class="checkbox">
                                                         <label><input type="checkbox" name="formulario_spot[tides][]" value="1">Baja</label>
@@ -134,7 +138,7 @@
                                                 <div class="panel panel-default">
                                                     <div class="panel-heading">
                                                         <h2><i class="fa fa-map-marker fa-fw"></i>Localización</h2>
-                                                        <span>Zona del Spot <b>San Ciprian</b></span>
+                                                        <span>Zona del Spot <b>San Ciprian</b> <i class="info glyphicon glyphicon-info-sign" title="La zona del spot es donde está la boya mas cercana que da las previsiones marítimas."></i></span>
                                                     </div>
                                                     <div class="panel-body">
                                                         <div>
@@ -167,13 +171,102 @@
                                 <!-- /step1 -->
                                 <!-- step2 -->
                                 <div class="tab-pane" role="tabpanel" id="step2">
-                                    <div class="step2"> </div>
+                                    <div class="step2">
+                                        <h2>Swell - Mar de fondo</h2>
+                                        <p>En este apartado configuramos el swell necesario para surfear ene ste spot. Ten en cuenta que las medidas que usen van a ser <b>el mar de fondo</b>.</p>
+                                        <p>El mar de fondo no tiene porque coincidir con el tamaño real de las olas en la costa. <a href="#" target="_blank">Lee este articulo si quieres saber mas sobre este tema.</a></p>
+
+                                        <div class="row col-lg-12">
+                                           <h3>Mar de fondo necesario</h3>
+                                           <div data-role="selectable">
+                                            <span class="ico-sssswell-small" title="Marejadilla 0 - 0,5 metros">
+                                                <span class="path1"></span><span class="path2"></span><span class="path3"></span>
+                                            </span>
+
+                                            <span class="ico-sssswell-medium" title="Marejada 0,6 - 1,25 metros">
+                                                <span class="path1"></span><span class="path2"></span><span class="path3"></span><span class="path4"></span>
+                                            </span>
+
+                                            <span class="ico-sssswell-big" title="Fuerte Marejada 1,26 - 2,5 metros">
+                                                <span class="path1"></span><span class="path2"></span><span class="path3"></span><span class="path4"></span><span class="path5"></span><span class="path6"></span><span class="path7"></span>
+                                            </span>
+
+                                            <span class="ico-sssswell-enormuos" title="Mar Gruesa 2,6 - 4,0 metros">
+                                                <span class="path1"></span><span class="path2"></span><span class="path3"></span><span class="path4"></span><span class="path5"></span><span class="path6"></span>
+                                            </span>
+
+                                            <span class="ico-sssswell-monstrous" title="Muy Gruesa +4 metros"></span>
+                                            </div>
+                                        </div>
+
+                                        <div class="row">
+                                            <h3>Dirección del Swell</h3>
+
+                                            <div class="col-lg-4">
+                                                <p>Selecciona el rango de swell bueno para el spot.</p>
+                                                <div class="compas_wrapper">
+                                                  <img src="https://www.surfsearchspot.com/wp-content/themes/surfSearchSpot/img/icons/compass.png" alt="rosa de los vientos" />
+                                                  <canvas id="myCanvas" class="compas" width="200" height="200"></canvas>
+                                                </div>
+                                                <label for="formulario_spot[swell_ini]">Desde:</label>
+                                                <select id="start" name="formulario_spot[swell_ini]" required="true" class="form-control list-group" size="1">
+                                                  <option value="1.5" selected="selected">N</option>
+                                                  <!-- <option value="1.65">NNE</option> -->
+                                                  <option value="1.75">NE</option>
+                                                  <!-- <option value="1.875">ENE</option> -->
+                                                  <option value="0">E</option>
+                                                  <!-- <option value="0.125">ESE</option> -->
+                                                  <option value="0.25">SE</option>
+                                                  <!-- <option value="0.375">SSE</option> -->
+                                                  <option value="0.5">S</option>
+                                                  <!-- <option value="0.625">SSW</option> -->
+                                                  <option value="0.75">SW</option>
+                                                  <!-- <option value="0.875">WSW</option> -->
+                                                  <option value="1">W</option>
+                                                  <!-- <option value="1.125">WNW</option> -->
+                                                  <option value="1.25">NW</option>
+                                                  <!-- <option value="1.375">NNW</option> -->
+                                                </select>
+
+                                                <label for="formulario_spot[swell_ini]">Hasta:</label>
+                                                <select id="end" name="formulario_spot[swell_ini]" required="true" class="form-control list-group" size="1">
+                                                   <option value="1.5" selected="selected">N</option>
+                                                  <!-- <option value="1.65">NNE</option> -->
+                                                  <option value="1.75">NE</option>
+                                                  <!-- <option value="1.875">ENE</option> -->
+                                                  <option value="0">E</option>
+                                                  <!-- <option value="0.125">ESE</option> -->
+                                                  <option value="0.25">SE</option>
+                                                  <!-- <option value="0.375">SSE</option> -->
+                                                  <option value="0.5">S</option>
+                                                  <!-- <option value="0.625">SSW</option> -->
+                                                  <option value="0.75">SW</option>
+                                                  <!-- <option value="0.875">WSW</option> -->
+                                                  <option value="1">W</option>
+                                                  <!-- <option value="1.125">WNW</option> -->
+                                                  <option value="1.25">NW</option>
+                                                  <!-- <option value="1.375">NNW</option> -->
+                                                </select>
+                                              <!-- compas_wrapper -->
+                                            <script src="compass.js"></script>
+                                        </div>
+                                        <div class="col-lg-8">
+                                           <img src="http://www.destination360.com/north-america/us/virginia/virginia-beach/virginia-beach-travelodge-map.gif"/>
+                                        </div>
+
+
+                                        </div>
+                                        <!--   <div class="row col-lg-12"> -->
+                                    </div>
+
+
+
                                     <ul class="list-inline pull-right">
                                         <li>
-                                            <button type="button" class="btn btn-default prev-step">Previous</button>
+                                            <button type="button" class="btn btn-default prev-step">Anterior</button>
                                         </li>
                                         <li>
-                                            <button type="button" class="btn btn-primary next-step">Save and continue</button>
+                                            <button type="button" class="btn btn-primary next-step">Continuar</button>
                                         </li>
                                     </ul>
                                 </div>
