@@ -75,7 +75,11 @@ $(document).ready(function () {
     $("div[data-role='selectable'] span").click(function(){
         $(this).toggleClass('selected');
         $(this).siblings('span').removeClass('selected');
+    });
 
+    $(".complex").click(function(){
+        $path = $(this).attr('data-class');
+        $(this).children( "."+$path ).toggleClass('selected-complex');
     });
 
 

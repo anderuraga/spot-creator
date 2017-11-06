@@ -146,14 +146,9 @@
                                                             <input type="text" id="formulario_spot_latitude" name="formulario_spot[latitude]" readonly required="required">
                                                             <label for="formulario_spot_longitude" class="required">Longitud:</label>
                                                             <input type="text" id="formulario_spot_longitude" name="formulario_spot[longitude]" readonly required="required"> </div>
-                                                        <style>
-                                                            #map-canvas {
-                                                                width: auto;
-                                                                height: 300px;
-                                                            }
-                                                        </style>
+
                                                         <p>Arrastra el marcador en el mapa para seleccionar tu localización</p>
-                                                        <div id="map-canvas"></div>
+                                                        <img src="http://www.destination360.com/north-america/us/virginia/virginia-beach/virginia-beach-travelodge-map.gif"/>
                                                     </div>
                                                 </div>
                                             </div>
@@ -179,19 +174,19 @@
                                         <div class="row col-lg-12">
                                            <h3>Mar de fondo necesario</h3>
                                            <div data-role="selectable">
-                                            <span class="ico-sssswell-small" title="Marejadilla 0 - 0,5 metros">
+                                            <span class="ico-sssswell-small complex" data-class="path3" title="Marejadilla 0 - 0,5 metros">
                                                 <span class="path1"></span><span class="path2"></span><span class="path3"></span>
                                             </span>
 
-                                            <span class="ico-sssswell-medium" title="Marejada 0,6 - 1,25 metros">
+                                            <span class="ico-sssswell-medium complex" data-class="path2" title="Marejada 0,6 - 1,25 metros">
                                                 <span class="path1"></span><span class="path2"></span><span class="path3"></span><span class="path4"></span>
                                             </span>
 
-                                            <span class="ico-sssswell-big" title="Fuerte Marejada 1,26 - 2,5 metros">
+                                            <span class="ico-sssswell-big complex" data-class="path2" title="Fuerte Marejada 1,26 - 2,5 metros">
                                                 <span class="path1"></span><span class="path2"></span><span class="path3"></span><span class="path4"></span><span class="path5"></span><span class="path6"></span><span class="path7"></span>
                                             </span>
 
-                                            <span class="ico-sssswell-enormuos" title="Mar Gruesa 2,6 - 4,0 metros">
+                                            <span class="ico-sssswell-enormuos complex" data-class="path1" title="Mar Gruesa 2,6 - 4,0 metros">
                                                 <span class="path1"></span><span class="path2"></span><span class="path3"></span><span class="path4"></span><span class="path5"></span><span class="path6"></span>
                                             </span>
 

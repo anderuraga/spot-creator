@@ -35,6 +35,10 @@ div[data-role="selectable"] span:hover{
     color: #00B5D6;
 }
 
+.selected-complex:before{
+    color: #00B5D6 !important;
+}
+
 .selected .path9:before{
     color: #00B5D6 !important;
 }
