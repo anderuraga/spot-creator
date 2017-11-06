@@ -167,31 +167,52 @@
                                 <!-- step2 -->
                                 <div class="tab-pane" role="tabpanel" id="step2">
                                     <div class="step2">
-                                        <h2>Swell - Mar de fondo</h2>
-                                        <p>En este apartado configuramos el swell necesario para surfear ene ste spot. Ten en cuenta que las medidas que usen van a ser <b>el mar de fondo</b>.</p>
-                                        <p>El mar de fondo no tiene porque coincidir con el tamaño real de las olas en la costa. <a href="#" target="_blank">Lee este articulo si quieres saber mas sobre este tema.</a></p>
+                                        <div class="row">
+                                            <h2>Swell - Mar de fondo</h2>
+                                            <p>En este apartado configuramos el swell necesario para surfear ene ste spot. Ten en cuenta que las medidas que usen van a ser <b>el mar de fondo</b>.</p>
+                                            <p>El mar de fondo no tiene porque coincidir con el tamaño real de las olas en la costa. <a href="#" target="_blank">Lee este articulo si quieres saber mas sobre este tema.</a></p>
+                                            <p>El <b>Periodo</b> está directamente relacionado con la energía de las olas. Por definición el periodo es el tiempo medio (en segundos) que transcurre entre que las dos crestas de dos olas consecutivas pasar por el mismo punto en alta mar.  <a href="#" target="_blank">Lee este articulo si quieres saber mas sobre este tema.</a></p>
+                                        </div>
+                                        <div class="row">
+                                          <h3>Mar de fondo necesario</h3>
+                                          <div class="col-lg-12">
+                                               <div data-role="selectable">
+                                                    <span class="ico-sssswell-small complex" data-class="path3" title="Marejadilla 0 - 0,5 metros">
+                                                        <span class="path1"></span><span class="path2"></span><span class="path3"></span>
+                                                    </span>
 
-                                        <div class="row col-lg-12">
-                                           <h3>Mar de fondo necesario</h3>
-                                           <div data-role="selectable">
-                                            <span class="ico-sssswell-small complex" data-class="path3" title="Marejadilla 0 - 0,5 metros">
-                                                <span class="path1"></span><span class="path2"></span><span class="path3"></span>
-                                            </span>
+                                                    <span class="ico-sssswell-medium complex" data-class="path2" title="Marejada 0,6 - 1,25 metros">
+                                                        <span class="path1"></span><span class="path2"></span><span class="path3"></span><span class="path4"></span>
+                                                    </span>
 
-                                            <span class="ico-sssswell-medium complex" data-class="path2" title="Marejada 0,6 - 1,25 metros">
-                                                <span class="path1"></span><span class="path2"></span><span class="path3"></span><span class="path4"></span>
-                                            </span>
+                                                    <span class="ico-sssswell-big complex" data-class="path2" title="Fuerte Marejada 1,26 - 2,5 metros">
+                                                        <span class="path1"></span><span class="path2"></span><span class="path3"></span><span class="path4"></span><span class="path5"></span><span class="path6"></span><span class="path7"></span>
+                                                    </span>
 
-                                            <span class="ico-sssswell-big complex" data-class="path2" title="Fuerte Marejada 1,26 - 2,5 metros">
-                                                <span class="path1"></span><span class="path2"></span><span class="path3"></span><span class="path4"></span><span class="path5"></span><span class="path6"></span><span class="path7"></span>
-                                            </span>
+                                                    <span class="ico-sssswell-enormuos complex" data-class="path1" title="Mar Gruesa 2,6 - 4,0 metros">
+                                                        <span class="path1"></span><span class="path2"></span><span class="path3"></span><span class="path4"></span><span class="path5"></span><span class="path6"></span>
+                                                    </span>
 
-                                            <span class="ico-sssswell-enormuos complex" data-class="path1" title="Mar Gruesa 2,6 - 4,0 metros">
-                                                <span class="path1"></span><span class="path2"></span><span class="path3"></span><span class="path4"></span><span class="path5"></span><span class="path6"></span>
-                                            </span>
-
-                                            <span class="ico-sssswell-monstrous" title="Muy Gruesa +4 metros"></span>
+                                                    <span class="ico-sssswell-monstrous" title="Muy Gruesa +4 metros"></span>
+                                                </div>
                                             </div>
+                                            <div class="col-lg-12">
+                                                <!-- periodo -->
+                                                <label for="formulario_spot_period" class="required">Periodo:<i class="info glyphicon glyphicon-info-sign" title="Si no sabes que poner 12s esta bien."></i></label>
+                                                <input type="number" id="formulario_spot_period" name="formulario_spot[period]" required="required" placeholder="12" class="form-control" size="2" alt="Indica el mejor periodo para esta spot" value="12">
+
+                                                <!-- tamaño swell -->
+                                                <label for="formulario_spot_swell_min" class="required">Tamaño mínino del swell:</label>
+                                                <input type="number" id="formulario_spot_swell_min" name="formulario_spot[swell_min]" required="required" step="0.5" min="0" max="15" placeholder="" class="form-control" alt="Tamaño mínimo del swell (m)">
+
+                                                <label for="formulario_spot_swell_max" class="required">Tamaño máximo del swell:</label>
+                                                <input type="number" id="formulario_spot_swell_max" name="formulario_spot[swell_max]" required="required" step="0.5" min="0" max="15" placeholder="" class="form-control" alt="Tamaño máximo del swell (m)">
+
+                                                <label for="formulario_spot_swell_size" class="required">Tamaño perfecto del swell:</label>
+                                                <input type="number" id="formulario_spot_swell_size" name="formulario_spot[swell_size]" required="required" step="0.5" min="0" max="15" placeholder="" class="form-control" alt="Tamaño perfecto del swell (m)">
+
+                                            </div>
+
                                         </div>
 
                                         <div class="row">
