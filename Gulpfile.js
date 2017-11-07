@@ -2,6 +2,8 @@
 
 //librerias
 var gulp = require('gulp');
+var livereload = require('gulp-livereload');
+var merge = require('merge-stream');
 var clean = require('gulp-clean');
 var concat = require('gulp-concat');
 var sass = require('gulp-sass');
@@ -23,6 +25,12 @@ gulp.task('sass', function() {
 gulp.task('html', function() {
     gulp.src([
                     'src/html/head.html',
+                    'src/html/navigation.html',
+                    'src/html/step1.html',
+                    'src/html/step2.html',
+                    'src/html/step3.html',
+                    'src/html/step4.html',
+                    'src/html/step5.html',
                     'src/html/footer.html'
                   ])
     .pipe(concat('index.html'))
@@ -31,16 +39,22 @@ gulp.task('html', function() {
 
 
 gulp.task('move', function() {
-    gulp.src('src/js/**.*')
-    .pipe(gulp.dest('./dist/js/'));
+  var taskJs =  gulp.src('src/js/**.*')
+                .pipe(gulp.dest('./dist/js/'));
 
-     gulp.src('src/fonts/**.*')
-    .pipe(gulp.dest('./dist/fonts/'));
+  var taskFonts = gulp.src('src/fonts/**.*')
+                    .pipe(gulp.dest('./dist/fonts/'));
+
+    return merge(taskJs, taskFonts);
 });
 
 
 
 //Default task
 gulp.task('default',function() {
-    gulp.watch('src/sass/**/*.scss',['clean','sass','html','move']);
+
+    livereload.listen();
+
+    gulp.watch('src/sass/**/*.scss',['sass','html','move']);
+    gulp.watch('src/html/**/*.html',['html','move']);
 });

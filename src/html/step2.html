@@ -1,0 +1,123 @@
+<!-- step2 -->
+<div class="tab-pane" role="tabpanel" id="step2">
+    <div class="step2">
+        <div class="row">
+            <h2>Swell - Mar de fondo</h2>
+            <p>En este apartado configuramos el swell necesario para surfear ene ste spot. Ten en cuenta que las medidas que usen van a ser <b>el mar de fondo</b>.</p>
+            <p>El mar de fondo no tiene porque coincidir con el tamaño real de las olas en la costa. <a href="#" target="_blank">Lee este articulo si quieres saber mas sobre este tema.</a></p>
+            <p>El <b>Periodo</b> está directamente relacionado con la energía de las olas. Por definición el periodo es el tiempo medio (en segundos) que transcurre entre que las dos crestas de dos olas consecutivas pasar por el mismo punto en alta mar.  <a href="#" target="_blank">Lee este articulo si quieres saber mas sobre este tema.</a></p>
+        </div>
+        <div class="row">
+          <h3>Mar de fondo necesario</h3>
+          <div class="col-lg-12">
+               <div data-role="selectable">
+                    <span class="ico-sssswell-small complex" data-class="path3" title="Marejadilla 0 - 0,5 metros">
+                        <span class="path1"></span><span class="path2"></span><span class="path3"></span>
+                    </span>
+
+                    <span class="ico-sssswell-medium complex" data-class="path2" title="Marejada 0,6 - 1,25 metros">
+                        <span class="path1"></span><span class="path2"></span><span class="path3"></span><span class="path4"></span>
+                    </span>
+
+                    <span class="ico-sssswell-big complex" data-class="path2" title="Fuerte Marejada 1,26 - 2,5 metros">
+                        <span class="path1"></span><span class="path2"></span><span class="path3"></span><span class="path4"></span><span class="path5"></span><span class="path6"></span><span class="path7"></span>
+                    </span>
+
+                    <span class="ico-sssswell-enormuos complex" data-class="path1" title="Mar Gruesa 2,6 - 4,0 metros">
+                        <span class="path1"></span><span class="path2"></span><span class="path3"></span><span class="path4"></span><span class="path5"></span><span class="path6"></span>
+                    </span>
+
+                    <span class="ico-sssswell-monstrous" title="Muy Gruesa +4 metros"></span>
+                </div>
+            </div>
+            <div class="col-lg-12">
+                <!-- periodo -->
+                <label for="formulario_spot_period" class="required">Periodo:<i class="info glyphicon glyphicon-info-sign" title="Si no sabes que poner 12s esta bien."></i></label>
+                <input type="number" id="formulario_spot_period" name="formulario_spot[period]" required="required" placeholder="12" class="form-control" size="2" alt="Indica el mejor periodo para esta spot" value="12">
+
+                <!-- tamaño swell -->
+                <label for="formulario_spot_swell_min" class="required">Tamaño mínino del swell:</label>
+                <input type="number" id="formulario_spot_swell_min" name="formulario_spot[swell_min]" required="required" step="0.5" min="0" max="15" placeholder="" class="form-control" alt="Tamaño mínimo del swell (m)">
+
+                <label for="formulario_spot_swell_max" class="required">Tamaño máximo del swell:</label>
+                <input type="number" id="formulario_spot_swell_max" name="formulario_spot[swell_max]" required="required" step="0.5" min="0" max="15" placeholder="" class="form-control" alt="Tamaño máximo del swell (m)">
+
+                <label for="formulario_spot_swell_size" class="required">Tamaño perfecto del swell:</label>
+                <input type="number" id="formulario_spot_swell_size" name="formulario_spot[swell_size]" required="required" step="0.5" min="0" max="15" placeholder="" class="form-control" alt="Tamaño perfecto del swell (m)">
+
+            </div>
+
+        </div>
+
+        <div class="row">
+            <h3>Dirección del Swell</h3>
+
+            <div class="col-lg-4">
+                <p>Selecciona el rango de swell bueno para el spot.</p>
+                <div class="compas_wrapper">
+                  <img src="https://www.surfsearchspot.com/wp-content/themes/surfSearchSpot/img/icons/compass.png" alt="rosa de los vientos" />
+                  <canvas id="myCanvas" class="compas" width="200" height="200"></canvas>
+                </div>
+                <label for="formulario_spot[swell_ini]">Desde:</label>
+                <select id="start" name="formulario_spot[swell_ini]" required="true" class="form-control list-group" size="1">
+                  <option value="1.5" selected="selected">N</option>
+                  <!-- <option value="1.65">NNE</option> -->
+                  <option value="1.75">NE</option>
+                  <!-- <option value="1.875">ENE</option> -->
+                  <option value="0">E</option>
+                  <!-- <option value="0.125">ESE</option> -->
+                  <option value="0.25">SE</option>
+                  <!-- <option value="0.375">SSE</option> -->
+                  <option value="0.5">S</option>
+                  <!-- <option value="0.625">SSW</option> -->
+                  <option value="0.75">SW</option>
+                  <!-- <option value="0.875">WSW</option> -->
+                  <option value="1">W</option>
+                  <!-- <option value="1.125">WNW</option> -->
+                  <option value="1.25">NW</option>
+                  <!-- <option value="1.375">NNW</option> -->
+                </select>
+
+                <label for="formulario_spot[swell_ini]">Hasta:</label>
+                <select id="end" name="formulario_spot[swell_ini]" required="true" class="form-control list-group" size="1">
+                   <option value="1.5" selected="selected">N</option>
+                  <!-- <option value="1.65">NNE</option> -->
+                  <option value="1.75">NE</option>
+                  <!-- <option value="1.875">ENE</option> -->
+                  <option value="0">E</option>
+                  <!-- <option value="0.125">ESE</option> -->
+                  <option value="0.25">SE</option>
+                  <!-- <option value="0.375">SSE</option> -->
+                  <option value="0.5">S</option>
+                  <!-- <option value="0.625">SSW</option> -->
+                  <option value="0.75">SW</option>
+                  <!-- <option value="0.875">WSW</option> -->
+                  <option value="1">W</option>
+                  <!-- <option value="1.125">WNW</option> -->
+                  <option value="1.25">NW</option>
+                  <!-- <option value="1.375">NNW</option> -->
+                </select>
+              <!-- compas_wrapper -->
+
+        </div>
+        <div class="col-lg-8">
+           <img src="http://www.destination360.com/north-america/us/virginia/virginia-beach/virginia-beach-travelodge-map.gif"/>
+        </div>
+
+
+        </div>
+        <!--   <div class="row col-lg-12"> -->
+    </div>
+
+
+
+    <ul class="list-inline pull-right">
+        <li>
+            <button type="button" class="btn btn-default prev-step">Anterior</button>
+        </li>
+        <li>
+            <button type="button" class="btn btn-primary next-step">Continuar</button>
+        </li>
+    </ul>
+</div>
+<!-- /step2 -->
