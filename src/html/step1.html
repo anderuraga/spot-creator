@@ -1,7 +1,14 @@
 <!-- step1 -->
 <div class="tab-pane active" role="tabpanel" id="step1">
     <div class="step1">
-        <div class="row col-lg-12">
+
+       <ul class="list-inline pull-right">
+            <li>
+                <button type="button" class="btn btn-primary next-step">Continuar</button>
+            </li>
+        </ul>
+
+        <div class="row">
             <h2>Crear Nuevo Spot</h2>
             <p>Gracias por animarte a mejorar este spot. Vamos comenzar paso a paso, con tu ayuda vamos a conseguir la mejor guia de surf.</p>
             <p>Estas a punto de convertirte en <b>Embajador@</b> de este Spot.</p>
@@ -10,7 +17,8 @@
             <div class="col-lg-6">
                 <div class="form-group">
                     <label for="formulario_spot_name" class="required">Nombre:</label>
-                    <input type="text" id="formulario_spot_name" name="formulario_spot[name]" required="required" placeholder="Nombre del spot, o en su defecto el nombre de la playa" class="form-control" alt="Como se llama el surf spot"> </div>
+                    <input type="text" id="formulario_spot_name" name="formulario_spot[name]" required="required" placeholder="Nombre del spot, o en su defecto el nombre de la playa" class="form-control" alt="Como se llama el surf spot">
+                </div>
                 <div class="form-group">
                     <label for="formulario_spot_level" class="required">Nivel para surfear el spot</label>
                     <div data-role="selectable">
@@ -55,12 +63,14 @@
                         <label><input type="checkbox" name="formulario_spot[tides][]" value="2">Baja Bajando</label>
                         <label><input type="checkbox" name="formulario_spot[tides][]" value="3">Baja Subiendo</label>
                         <br><br>
-                        <label><input type="checkbox" name="formulario_spot[tides][]" value="4">Media</label>                                   <label><input type="checkbox" name="formulario_spot[tides][]" value="5">Alta bajando</label>
+                        <label><input type="checkbox" name="formulario_spot[tides][]" value="4">Media</label>
+                        <label><input type="checkbox" name="formulario_spot[tides][]" value="5">Alta bajando</label>
                         <label><input type="checkbox" name="formulario_spot[tides][]" value="6">Media Subiendo</label>
                         <br><br>
                         <label><input type="checkbox" name="formulario_spot[tides][]" value="7">Alta</label>
                         <label><input type="checkbox" name="formulario_spot[tides][]" value="8">Media bajando</label>
-                        <label><input type="checkbox" name="formulario_spot[tides][]" value="9">Alta subiendo</label>                       </div>
+                        <label><input type="checkbox" name="formulario_spot[tides][]" value="9">Alta subiendo</label>
+                    </div>
 
                 </div>
 
@@ -76,8 +86,8 @@
                             <label for="formulario_spot_latitude" class="required">Latitud:</label>
                             <input type="text" id="formulario_spot_latitude" name="formulario_spot[latitude]" readonly required="required">
                             <label for="formulario_spot_longitude" class="required">Longitud:</label>
-                            <input type="text" id="formulario_spot_longitude" name="formulario_spot[longitude]" readonly required="required"> </div>
-
+                            <input type="text" id="formulario_spot_longitude" name="formulario_spot[longitude]" readonly required="required">
+                        </div>
                         <p>Arrastra el marcador en el mapa para seleccionar tu localización</p>
                         <img src="http://www.destination360.com/north-america/us/virginia/virginia-beach/virginia-beach-travelodge-map.gif"/>
                     </div>
@@ -88,10 +98,6 @@
         <!--/localizacion  -->
     </div>
     <!-- step1 -->
-    <ul class="list-inline pull-right">
-        <li>
-            <button type="button" class="btn btn-primary next-step">Continuar</button>
-        </li>
-    </ul>
+
 </div>
 <!-- /step1 -->

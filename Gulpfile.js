@@ -31,6 +31,7 @@ gulp.task('html', function() {
                     'src/html/step3.html',
                     'src/html/step4.html',
                     'src/html/step5.html',
+                    'src/html/modal-mundaka.html',
                     'src/html/footer.html'
                   ])
     .pipe(concat('index.html'))

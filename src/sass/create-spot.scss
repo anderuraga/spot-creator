@@ -1,3 +1,25 @@
+// Colores
+
+$azul_primario : #00B5D6;
+
+body{
+    background: #FFF !important;
+}
+
+img{
+    width: 100%;
+    height: auto;
+}
+
+.wizard .row{
+    padding: 2% !important;
+    margin-right: 0;
+    margin-left: 0;
+}
+
+h2{
+    color: $azul_primario;
+}
 
 /* icon
 **************************************/
