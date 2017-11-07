@@ -13,27 +13,16 @@
 
        <div class="row">
         <h2>Viento</h2>
-        <p>Ahora vamos a configurar el viento deseable para este spot, si no sabes bien que valores poner lo puedes dejar segun esta.</p>
-        <p>Las unidades para el viento son <b>Km/h</b> Kilomeros por Hora.</p>
+           <p>Ahora vamos a configurar el viento deseable para este spot.</p>
        </div>
 
-        <div class="row">
-            <label for="formulario_spot_wind_size" class="required">Velocidad óptima:</label>
-            <input type="number" id="formulario_spot_wind_size" name="formulario_spot[wind_size]" required="required" placeholder="50" class="form-control" alt="Velocidad de viento perfecta para el spot (Kmts/h)">
 
-            <label for="formulario_spot_wind_max" class="required">Velocidad máxima:</label>
-            <input type="number" id="formulario_spot_wind_max" name="formulario_spot[wind_max]" required="required" placeholder="100" class="form-control" alt="Velocidad máxima que aguanta el spot (Kmts/h)">
-
-            <label for="formulario_spot_wind_min" class="required">Velocidad mímima:</label>
-            <input type="number" id="formulario_spot_wind_min" name="formulario_spot[wind_min]" required="required" placeholder="10" class="form-control" alt="Velocidad de viento necesaría para que funcione el spot (Kmts/h)">
-        </div>
 
         <div class="row">
-         <div class="col-lg-4">
-             <div class="compas_wrapper">
-                  <img src="https://www.surfsearchspot.com/wp-content/themes/surfSearchSpot/img/icons/compass.png" alt="rosa de los vientos" />
-                  <canvas id="myCanvasWind" class="compas" width="200" height="200"></canvas>
-              </div>
+
+         <div class="col-lg-6">
+             <h3>Dirección</h3>
+             <div class="wind-form">
                 <label for="formulario_spot[wind_ini]">Desde:</label>
                 <select id="startWind" name="formulario_spot[wind_ini]" required="true" class="form-control list-group" size="1">
                   <option value="1.5" selected="selected">N</option>
@@ -73,14 +62,36 @@
                   <option value="1.25">NW</option>
                   <!-- <option value="1.375">NNW</option> -->
                 </select>
+            </div>
+            <div class="compas_wrapper">
+              <img src="https://www.surfsearchspot.com/wp-content/themes/surfSearchSpot/img/icons/compass.png" alt="rosa de los vientos" />
+              <canvas id="myCanvasWind" class="compas" width="200" height="200"></canvas>
+            </div>
         </div>
-        <!-- /col-lg-4 -->
-        <div class="col-lg-8">
-           <img src="http://www.destination360.com/north-america/us/virginia/virginia-beach/virginia-beach-travelodge-map.gif"/>
+        <!-- /col-lg-6 -->
+        <div class="col-lg-6">
+            <h3>Velocidad</h3>
+            <p>Si no sabes bien que valores poner lo puedes dejar segun esta.</p>
+            <p>Las unidades para el viento son <b>Km/h</b> Kilomeros por Hora.</p>
+            <div class="wind-form">
+                <label for="formulario_spot_wind_size" class="required">Óptima:</label>
+                <input type="number" id="formulario_spot_wind_size" name="formulario_spot[wind_size]" required="required" placeholder="50" class="form-control" alt="Velocidad de viento perfecta para el spot (Kmts/h)">
+
+                <label for="formulario_spot_wind_max" class="required">Máxima:</label>
+                <input type="number" id="formulario_spot_wind_max" name="formulario_spot[wind_max]" required="required" placeholder="100" class="form-control" alt="Velocidad máxima que aguanta el spot (Kmts/h)">
+
+                <label for="formulario_spot_wind_min" class="required">Mímima:</label>
+                <input type="number" id="formulario_spot_wind_min" name="formulario_spot[wind_min]" required="required" placeholder="10" class="form-control" alt="Velocidad de viento necesaría para que funcione el spot (Kmts/h)">
+            </div>
         </div>
 
 
     </div>
+
+
+
+
+
 
 
   </div>

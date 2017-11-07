@@ -84,6 +84,19 @@ compas_wrapper option{
   width: 25px;
 }
 
+.wind-form{
+
+    display: flex;
+
+    label{
+        margin: 0 5px;
+    }
+
+    input, select{
+        width: 70px;
+    }
+}
+
 
 
 
