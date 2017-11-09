@@ -21,6 +21,10 @@ h2{
     color: $azul_primario;
 }
 
+.modal-dialog{
+    z-index: 99999 !important;
+}
+
 /* icon
 **************************************/
 
