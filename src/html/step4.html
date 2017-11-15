@@ -2,9 +2,7 @@
 <div class="tab-pane" role="tabpanel" id="step4">
     <div class="step4">
 
-
-
-         <ul class="list-inline pull-right">
+       <ul class="list-inline pull-right">
             <li>
                 <button type="button" class="btn btn-default prev-step">Anterior</button>
             </li>
@@ -13,18 +11,83 @@
             </li>
         </ul>
 
+       <div class="row">
+        <h2>Viento</h2>
+           <p>Ahora vamos a configurar el viento deseable para este spot.</p>
+       </div>
+
+
 
         <div class="row">
-             <h2>Descripción del Spot</h2>
-            <p>Es interesante que la descripción sea lo mas completa posible. <button type="button" class="btn btn-outline btn-default" data-toggle="modal" data-target="#modalGuia">Puedes ver una descripción completa aquí</button></p>
-             <p>Intenta escribir sobre estas caracteristicas: <b>TIPO DE OLA</b>,<b>NIVEL DEL SPOT</b>,<b>ACCESOS</b>,<b>LOCALES</b>,<b>SERVICIOS</b> y <b>CURIOSIDADES</b>.</p>
-             <div class="form-group">
-                 <label for="formulario_spot_description">Description</label>
-                 <textarea id="formulario_spot_description" name="formulario_spot[description]" placeholder="Descripción detallada del spot" class="form-control" alt="Descripción detallada del spot"></textarea>
-            </div>
 
+         <div class="col-lg-6">
+             <h3>Dirección</h3>
+             <div class="wind-form">
+                <label for="formulario_spot[wind_ini]">Desde:</label>
+                <select id="startWind" name="formulario_spot[wind_ini]" required="true" class="form-control list-group" size="1">
+                  <option value="1.5" selected="selected">N</option>
+                  <!-- <option value="1.65">NNE</option> -->
+                  <option value="1.75">NE</option>
+                  <!-- <option value="1.875">ENE</option> -->
+                  <option value="0">E</option>
+                  <!-- <option value="0.125">ESE</option> -->
+                  <option value="0.25">SE</option>
+                  <!-- <option value="0.375">SSE</option> -->
+                  <option value="0.5">S</option>
+                  <!-- <option value="0.625">SSW</option> -->
+                  <option value="0.75">SW</option>
+                  <!-- <option value="0.875">WSW</option> -->
+                  <option value="1">W</option>
+                  <!-- <option value="1.125">WNW</option> -->
+                  <option value="1.25">NW</option>
+                  <!-- <option value="1.375">NNW</option> -->
+                </select>
+
+                <label for="formulario_spot[wind_ini]">Hasta:</label>
+                <select id="endWind" name="formulario_spot[wind_ini]" required="true" class="form-control list-group" size="1">
+                   <option value="1.5" selected="selected">N</option>
+                  <!-- <option value="1.65">NNE</option> -->
+                  <option value="1.75">NE</option>
+                  <!-- <option value="1.875">ENE</option> -->
+                  <option value="0">E</option>
+                  <!-- <option value="0.125">ESE</option> -->
+                  <option value="0.25">SE</option>
+                  <!-- <option value="0.375">SSE</option> -->
+                  <option value="0.5">S</option>
+                  <!-- <option value="0.625">SSW</option> -->
+                  <option value="0.75">SW</option>
+                  <!-- <option value="0.875">WSW</option> -->
+                  <option value="1">W</option>
+                  <!-- <option value="1.125">WNW</option> -->
+                  <option value="1.25">NW</option>
+                  <!-- <option value="1.375">NNW</option> -->
+                </select>
+            </div>
+            <div class="compas_wrapper">
+              <img src="https://www.surfsearchspot.com/wp-content/themes/surfSearchSpot/img/icons/compass.png" alt="rosa de los vientos" />
+              <canvas id="myCanvasWind" class="compas" width="200" height="200"></canvas>
+            </div>
+        </div>
+        <!-- /col-lg-6 -->
+        <div class="col-lg-6">
+            <h3>Velocidad</h3>
+            <p>Si no sabes bien que valores poner lo puedes dejar segun esta.</p>
+            <p>Las unidades para el viento son <b>Km/h</b> Kilomeros por Hora.</p>
+            <div class="wind-form">
+                <label for="formulario_spot_wind_size" class="required">Óptima:</label>
+                <input type="number" id="formulario_spot_wind_size" name="formulario_spot[wind_size]" required="required" placeholder="50" class="form-control" alt="Velocidad de viento perfecta para el spot (Kmts/h)">
+
+                <label for="formulario_spot_wind_max" class="required">Máxima:</label>
+                <input type="number" id="formulario_spot_wind_max" name="formulario_spot[wind_max]" required="required" placeholder="100" class="form-control" alt="Velocidad máxima que aguanta el spot (Kmts/h)">
+
+                <label for="formulario_spot_wind_min" class="required">Mímima:</label>
+                <input type="number" id="formulario_spot_wind_min" name="formulario_spot[wind_min]" required="required" placeholder="10" class="form-control" alt="Velocidad de viento necesaría para que funcione el spot (Kmts/h)">
+            </div>
         </div>
 
+
     </div>
+
+  </div>
 </div>
 <!-- /step4 -->
