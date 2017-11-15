@@ -2,14 +2,7 @@
 <div class="tab-pane" role="tabpanel" id="step4">
     <div class="step4">
 
-       <ul class="list-inline pull-right">
-            <li>
-                <button type="button" class="btn btn-default prev-step">Anterior</button>
-            </li>
-            <li>
-                <button type="button" class="btn btn-primary btn-info-full next-step">Siguiente</button>
-            </li>
-        </ul>
+
 
        <div class="row">
         <h2>Viento</h2>
@@ -22,7 +15,8 @@
 
          <div class="col-lg-6">
              <h3>Dirección</h3>
-             <div class="wind-form">
+             <p>Selecciona el rango de swell bueno para el spot.</p>
+             <div class="rose-form">
                 <label for="formulario_spot[wind_ini]">Desde:</label>
                 <select id="startWind" name="formulario_spot[wind_ini]" required="true" class="form-control list-group" size="1">
                   <option value="1.5" selected="selected">N</option>
@@ -84,10 +78,22 @@
                 <input type="number" id="formulario_spot_wind_min" name="formulario_spot[wind_min]" required="required" placeholder="10" class="form-control" alt="Velocidad de viento necesaría para que funcione el spot (Kmts/h)">
             </div>
         </div>
-
-
     </div>
 
+    <div class="row">
+         <ul class="list-inline pull-right">
+            <li>
+                <button type="button" class="btn btn-default prev-step">Anterior</button>
+            </li>
+            <li>
+                <button type="button" class="btn btn-primary next-step">Continuar</button>
+            </li>
+        </ul>
+    </div>
+
+
   </div>
+
+
 </div>
 <!-- /step4 -->
