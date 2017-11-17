@@ -57,6 +57,6 @@ gulp.task('default',function() {
 
     livereload.listen();
 
-    gulp.watch('src/sass/**/*.scss',['clean','sass','html','move']);
-    gulp.watch('src/html/**/*.html',['clean','sass','html','move']);
+    gulp.watch('src/sass/**/*.scss',['sass','html','move']);
+    gulp.watch('src/html/**/*.html',['sass','html','move']);
 });
