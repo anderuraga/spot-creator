@@ -11,7 +11,7 @@ var sass = require('gulp-sass');
 //Tasks
 
 gulp.task('clean', function () {
-    return gulp.src('./dist/')
+    return gulp.src('./dist/*')
         .pipe(clean({force: true}));
 
 });
@@ -57,6 +57,6 @@ gulp.task('default',function() {
 
     livereload.listen();
 
-    gulp.watch('src/sass/**/*.scss',['sass','html','move']);
-    gulp.watch('src/html/**/*.html',['html','move']);
+    gulp.watch('src/sass/**/*.scss',['clean','sass','html','move']);
+    gulp.watch('src/html/**/*.html',['clean','sass','html','move']);
 });
