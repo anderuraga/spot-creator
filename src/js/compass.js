@@ -13,6 +13,11 @@ function paint_compas(start, end, canva){
       var radius = 75;
       var antiClockwise = false;
 
+      if ( start == end ){
+        start = parseFloat(start) - 0.05;
+        end = parseFloat(end) + 0.05;
+      }
+
       ctx.beginPath();
       ctx.arc(x, y, radius, start*Math.PI, end*Math.PI, antiClockwise);
       ctx.lineTo(x, y);
